@@ -1,0 +1,114 @@
+﻿@model Fast_To_let.Models.AddInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AddInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tolet_catagory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tolet_catagory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tolet_available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tolet_available)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.local_area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.local_area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.road_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.road_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.house_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.house_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rent)
+        </dd>
+
+        <dt>
+    
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.photo)" wight="100" height="100" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.add_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

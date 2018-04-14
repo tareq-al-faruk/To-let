@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "admin";
+}
+
+<h2>admin</h2>
+welcome @HttpContext.Current.User.Identity.Name
+
+
+<ul style="list-style-type:none">
+    <li>@Html.ActionLink("Pending to view", "Index", "pendingApproved")</li>
+    <li>@Html.ActionLink("View user list", "Index", "userlist")</li>
+    <li>@Html.ActionLink("View advertisement", "Index", "advertise")</li>
+    <li>@Html.ActionLink("Create advertisement", "save_addinfo", "AddInfo")</li>
+</ul> 
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("logout", "user", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+        <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+
+    }
+}
+
+<div>
+    @Html.ActionLink("back", "Index", "home")
+</div>

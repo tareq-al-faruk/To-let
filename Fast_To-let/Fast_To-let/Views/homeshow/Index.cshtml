@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Fast_To_let.Models.AddInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tolet_catagory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tolet_available)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.local_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.road_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.house_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.facilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsApproved)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tolet_catagory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tolet_available)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.local_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.road_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.house_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.floor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.facilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsApproved)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Details", "Details", new { id=item.add_id }) |
+           
+        </td>
+    </tr>
+}
+
+</table>

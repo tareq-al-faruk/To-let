@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "userpage";
+}
+
+<h3>profile</h3>
+welcome @HttpContext.Current.User.Identity.Name
+
+<br>
+@Html.ActionLink("Create advertisement", "save_addinfo","AddInfo")
+<br/>
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("logout", "user", FormMethod.Post, new { id="logoutForm" }))
+    {
+        <a href="Javascript:document.getElementById('logoutForm').submit">logout</a>
+       
+    }
+}
